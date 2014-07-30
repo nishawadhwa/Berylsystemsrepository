@@ -1,0 +1,16 @@
+<%= form_for @values, :url => {:action => "signup"} do |f|%>
+Name:<%= f.text_field :name %><br />
+Date of Birth: <%= f.text_field :dateofbirth %><br />
+<div> Sex
+  <%= label :sex, "Male" %>
+  <%= f.radio_button  :sex , 'male', :checked => true%>
+  <%= label :sex, "Female" %><%= f.radio_button :sex ,'female' %>
+</div>
+Username: <%= f.text_field :username %>
+<br />
+Password: <%= f.password_field :password %>
+<br />
+Confirm Password<%= f.password_field :confirm_password %>
+<%= f.submit "create" %>
+<br />
+<% end %>

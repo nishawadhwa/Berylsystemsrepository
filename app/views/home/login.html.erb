@@ -1,0 +1,7 @@
+<%= form_for @values, :url => {:action => "login"} do |i|%>
+<%= i.label :Username %>
+<%= i.text_field :username %><br />
+<%= i.label :password%>
+<%= i.password_field :password %><br />
+<%= link_to "login", :controller => "home", :action => "viewall"%>
+<% end %>
