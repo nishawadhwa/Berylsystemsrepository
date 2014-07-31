@@ -1,0 +1,23 @@
+<h1>FORM SUBMISSION</h1>
+
+<form action="/home/linking">
+Name:<input type="text" name="name"><br>
+Admission No.<input type="text" name="admissionnumber"><br>
+Gender<br>
+  <div>
+    <input type="radio" name="n">male</input>
+    <input type="radio" name="n" ="n">Female</input>
+  </div>
+  <button type="submit" >Submit</button>
+  <button type="reset" >Reset</button>
+
+  </form>
+
+
+
+  new Rails form
+<%= form_tag({:controller => "home", :action => "save"}, :method=> "get" ) do %>
+<%= label_tag :Name%>
+<%= text_field_tag :name %>
+<%= submit_tag :confirm %>
+<% end %>
